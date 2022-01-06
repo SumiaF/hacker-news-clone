@@ -14,7 +14,7 @@ function App() {
   const [activePageIndex, setActivePageIndex] = useState(0);
 
   let url =
-    "http://hn.algolia.com/api/v1/search?query=" +
+    "https://hn.algolia.com/api/v1/search?query=" +
     topic +
     "&tags=story&page=" +
     activePageIndex;
