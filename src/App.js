@@ -39,14 +39,22 @@ function App() {
     return (
       <>
         {/* 
-      TODO:Nummber the pages here  needs to fix bug here   disable next and back on condition 
+      TODO:Nummber the pages here
         */}
-       {activePageIndex < (totalPages - 1) ? <button onClick={() => setActivePageIndex((pre) => pre + 1)}>
-          Next >>
-        </button> : <button> Next >> </button> }
-        <button onClick={() => setActivePageIndex((pre) => pre - 1)}>
-         >> Back
-        </button>
+        {activePageIndex < totalPages - 1 ? (
+          <button onClick={() => setActivePageIndex((pre) => pre + 1)}>
+            Next >>
+          </button>
+        ) : (
+          <button disabled={true}> Next >> </button>
+        )}
+        {activePageIndex === 0 ? (
+          <button disabled={true}> >> Back </button>
+        ) : (
+          <button onClick={() => setActivePageIndex((pre) => pre - 1)}>
+            >> Back
+          </button>
+        )}
       </>
     );
   }
