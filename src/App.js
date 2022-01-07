@@ -41,11 +41,11 @@ function App() {
         {/* 
       TODO:Nummber the pages here  needs to fix bug here   disable next and back on condition 
         */}
-        <button onClick={() => setActivePageIndex((pre) => pre + 1)}>
+       {activePageIndex < (totalPages - 1) ? <button onClick={() => setActivePageIndex((pre) => pre + 1)}>
           Next >>
-        </button>
+        </button> : <button> Next >> </button> }
         <button onClick={() => setActivePageIndex((pre) => pre - 1)}>
-          >>Back
+         >> Back
         </button>
       </>
     );
