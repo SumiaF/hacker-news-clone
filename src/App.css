@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display+SC');
+
+
+body {
+    font: normal 1em 'Open Sans', sans-serif;
+    background: #fafafa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header {
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+    h1{
+        font: normal 2.5em 'Playfair Display SC', serif;
+        text-align:center;
+    }     
+#searchterm,  #search {
+           font:1.2em 'Open sans';
+        }
+
+#searchterm{
+  padding:0.2em;
+  border:0.1em solid #819090;
+  border-left: none;
+  border-top: none;
+  margin:.2em;
+}
+
+#search{
+  padding:0.3em 1em;
+  background-color: #819090;
+  color: #fff;
+  border:none;
+}
+#search:hover {
+    color: #001F3F;
+    background-color: rgba(255, 255, 255, 0.924);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .item {
+    list-style:none;
+    text-align: left;
+    height: 50px;
+    margin: 0px 50px 0px 70px;
+    margin-bottom: 5px;
+    
+  }
+
+  .primary{
+    padding:0.5em 2em;
+    background-color: #9eaaaa;
+    color: #fff;
+    border:none;
+  }
+
+  button:hover {
+    color: #001F3F;
+    background-color: rgba(255, 255, 255, 0.924);
+}
+.pagination-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.search-section{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2em;
+}
+span{
+
+    font-size:.8em; 
+    font-weight:200;  
+    letter-spacing:1px;
+    margin-left: 1em;
+}
+
+
+.title{
+    font-size:1em; 
+    font-weight:600;  
+    letter-spacing:1px;
+    text-transform:uppercase;  
+     text-align:center;
+     margin:auto; 
+     white-space:nowrap;
+     padding-bottom:13px;
+  }
+  .title::before {
+    background-color: #c50000;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 20px;
+    margin-bottom: 5px;
+}
+p{
+    font-size:.8em; 
+    font-weight:200;  
+    margin:0;
+}
+/* .title:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+  position:absolute; right:0; bottom:0;
+    height: 3px;
+    width: 0px;
+    margin-bottom: 0.25em;
+  }
+   */
