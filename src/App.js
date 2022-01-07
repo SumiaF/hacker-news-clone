@@ -37,25 +37,37 @@ function App() {
   // This should act as a new component
   function Pagination({ activePageIndex, setActivePageIndex }) {
     return (
-      <>
+      <div className="pagination-container">
         {/* 
       TODO:Nummber the pages here
         */}
         {activePageIndex < totalPages - 1 ? (
-          <button onClick={() => setActivePageIndex((pre) => pre + 1)}>
+          <button
+            className="primary"
+            onClick={() => setActivePageIndex((pre) => pre + 1)}
+          >
             Next >>
           </button>
         ) : (
-          <button disabled={true}> Next >> </button>
+          <button className="primary" disabled={true}>
+            {" "}
+            Next >>{" "}
+          </button>
         )}
         {activePageIndex === 0 ? (
-          <button disabled={true}> >> Back </button>
+          <button className="primary" disabled={true}>
+            {" "}
+            >> Back{" "}
+          </button>
         ) : (
-          <button onClick={() => setActivePageIndex((pre) => pre - 1)}>
+          <button
+            className="primary"
+            onClick={() => setActivePageIndex((pre) => pre - 1)}
+          >
             >> Back
           </button>
         )}
-      </>
+      </div>
     );
   }
 
@@ -64,11 +76,13 @@ function App() {
     <div className="App">
       <header>
         <h1> Welcome to the news stories</h1>
-        <h2>You are viewing Page: {activePageIndex + 1}</h2>
         <hr />
       </header>
       <>
         <section className="search-section">
+          <h3>
+            Showing results on "{topic}"  ( page: {activePageIndex + 1} )
+          </h3>
           {/* //Form to get user search option */}
           <SearchStories getUserQuery={getUserQuery} />
         </section>

@@ -1,5 +1,6 @@
 import NewsStoriesDisplay from "./NewsStoriesDisplay";
 import React, { useState, useEffect } from "react";
+import "./App.css";
 
 function NewsStories({ stories }) {
   //ask chris if its neccessary or even right thing to do
@@ -27,7 +28,7 @@ function NewsStories({ stories }) {
   }, [stories]);
 
   return (
-    <div>
+    <div className="container">
       {newsStories.map((s) => (
         <NewsStoriesDisplay
           title={s.title}
